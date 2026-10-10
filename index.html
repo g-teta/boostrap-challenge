@@ -201,7 +201,170 @@
     </section>
   </main>
 
+  <!-- ============ FOOTER ============ -->
+  <footer class="container pb-4">
+    <hr class="mt-0 mb-4">
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <h2 class="h6 fw-bold text-success mb-3">About Paragraph</h2>
+        <p class="text-secondary mb-0 col-lg-9">Paragraph is a small team that organises tech meetups and training for young developers in Rwanda.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 ms-lg-auto">
+        <h2 class="h6 fw-bold text-success mb-3">Stay up to date on Paragraph Conference</h2>
+        <form class="input-group" aria-label="Newsletter sign up">
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <input type="email" class="form-control" id="newsletterEmail" placeholder="" aria-label="Email address">
+          <button class="btn btn-success" type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
 
+    <hr class="my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <a href="#home" class="btn btn-link link-success text-decoration-none">Community</a>
+        <a href="#home" class="btn btn-link link-success text-decoration-none">Tracks</a>
+        <div class="btn-group dropup">
+          <a href="#home" class="btn btn-outline-success">Other Confs</a>
+          <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle other conferences</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#home">Full Stack Conf</a></li>
+            <li><a class="dropdown-item" href="#home">Paragraph Conf</a></li>
+          </ul>
+        </div>
+      </div>
+      <small class="text-secondary">&copy; 2018 Full Stack Conf &amp; Paragraph</small>
+    </div>
+  </footer>
+
+  <!-- ============ REGISTRATION MODAL ============ -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content border-0 border-top border-success border-5 rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h2 class="modal-title visually-hidden" id="registerModalLabel">Register for Conference</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body pt-0">
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Hurry !</strong> Early bird registration ends in two days.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <form>
+            <!-- Basic info -->
+            <fieldset class="mb-3">
+              <legend class="h5 mb-3">Basic Info.</legend>
+              <div class="mb-3">
+                <label for="regName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="regName" autocomplete="name">
+              </div>
+              <div class="mb-3">
+                <label for="regEmail" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="regEmail" autocomplete="email">
+              </div>
+              <div class="mb-3">
+                <label for="regRole" class="form-label">Job Role:</label>
+                <select class="form-select" id="regRole">
+                  <option selected>Full Stack JS Developer</option>
+                  <option>Front-End Developer</option>
+                  <option>Back-End Developer</option>
+                  <option>Student</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <hr class="my-4">
+
+            <!-- Topics -->
+            <fieldset class="mb-3">
+              <legend class="h5 mb-3">Which Topics Interest You Most?</legend>
+              <div class="form-check ms-3">
+                <input class="form-check-input" type="checkbox" value="frameworks" id="topicFrameworks">
+                <label class="form-check-label" for="topicFrameworks">JavaScript Frameworks</label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input" type="checkbox" value="libraries" id="topicLibraries">
+                <label class="form-check-label" for="topicLibraries">JavaScript Libraries</label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input" type="checkbox" value="node" id="topicNode">
+                <label class="form-check-label" for="topicNode">Node.js</label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input" type="checkbox" value="build" id="topicBuild">
+                <label class="form-check-label" for="topicBuild">Build Tools</label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input" type="checkbox" value="es2015" id="topicEs2015">
+                <label class="form-check-label" for="topicEs2015">ES2015</label>
+              </div>
+            </fieldset>
+
+            <hr class="my-4">
+
+            <!-- Payment -->
+            <fieldset class="mb-3">
+              <legend class="h5 mb-3">Payment Info.</legend>
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <label for="regCard" class="form-label">Card Number:</label>
+                  <input type="text" class="form-control" id="regCard" inputmode="numeric" autocomplete="cc-number">
+                </div>
+                <div class="col-6 col-sm-3">
+                  <label for="regZip" class="form-label">Zip Code:</label>
+                  <input type="text" class="form-control" id="regZip" autocomplete="postal-code">
+                </div>
+                <div class="col-6 col-sm-3">
+                  <label for="regCvv" class="form-label">CVV:</label>
+                  <input type="text" class="form-control" id="regCvv" inputmode="numeric" autocomplete="cc-csc">
+                </div>
+              </div>
+
+              <label for="regMonth" class="form-label">Expiration Date:</label>
+              <div class="row g-3">
+                <div class="col-7">
+                  <select class="form-select" id="regMonth" aria-label="Expiration month">
+                    <option selected>1 - January</option>
+                    <option>2 - February</option>
+                    <option>3 - March</option>
+                    <option>4 - April</option>
+                    <option>5 - May</option>
+                    <option>6 - June</option>
+                    <option>7 - July</option>
+                    <option>8 - August</option>
+                    <option>9 - September</option>
+                    <option>10 - October</option>
+                    <option>11 - November</option>
+                    <option>12 - December</option>
+                  </select>
+                </div>
+                <div class="col-5">
+                  <select class="form-select" id="regYear" aria-label="Expiration year">
+                    <option selected>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <hr class="my-4">
+
+            <button type="submit" class="btn btn-lg btn-success">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
