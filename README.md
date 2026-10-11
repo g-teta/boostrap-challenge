@@ -51,6 +51,3 @@ Then visit http://localhost:8000. An internet connection is needed for the CDN-h
 - The expiration year dropdown starts at 2016 and ends at 2020, and the footer says 2018, so both need updating.
 - The nav links in the footer (Community, Tracks, Other Confs) point to `#home`.
 
-## Credits
-
-Organised by Paragraph. &copy; Full Stack Conf & Paragraph.
